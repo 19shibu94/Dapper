@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Test1";
+}
+
+<h2>Test1</h2>
+
+<script>
+
+function onclickbtn()
+{
+  var input=document.getElementById('Fname').value;
+   var input1=document.getElementById('Lname').value;
+   var str = new String(input1);
+   var fulname = input + ' ' + input1;
+   input = input + '.' + input1.charAt(0);
+   var InptAr = input1.split('');
+  //for(var i=0;i<str.length;i++)
+  //{
+  // if(i==0)
+  // {
+  // 	input=input+InptAr[i];
+  // }
+    //}
+  
+  
+   document.getElementById('FulName').innerHTML = input;
+   document.getElementById('FulName2').innerHTML = fulname;
+
+}
+</script>
+
+
+Fname:<input type="textbox" id='Fname'><br><br>
+Lname:<input type="textbox" id='Lname'><br><br>
+FullName:<label id="FulName"></label><br><br>
+FullName:<label id="FulName2"></label><br><br>
+<input type=button name="submit" value="submit" onclick="onclickbtn()">
+
